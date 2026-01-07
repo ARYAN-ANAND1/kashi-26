@@ -69,15 +69,17 @@ const Events = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const renderEventSection = (categoryKey: string, events: EventType[], tabInfo: any, ref: React.RefObject<HTMLDivElement>) => (
-    <div key={categoryKey} ref={ref} className="min-h-screen py-24">
+  const renderEventSection = (categoryKey: string, events: EventType[], tabInfo: any, ref: React.RefObject<HTMLDivElement>, isFirst: boolean = false) => (
+    <div key={categoryKey} ref={ref} className={`min-h-screen ${isFirst ? 'pt-56 pb-24' : 'py-24'}`}>
       {/* Category Title */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-16 px-4">
         <h1 
-          className={`text-6xl md:text-8xl font-ceviche bg-gradient-to-r ${tabInfo.color} bg-clip-text text-transparent`}
+          className={`text-4xl sm:text-6xl md:text-8xl font-bold bg-gradient-to-r ${tabInfo.color} bg-clip-text text-transparent`}
           style={{
-            textShadow: '0 0 40px rgba(255,255,255,0.3)',
-            filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.2))'
+            fontFamily: 'Ceviche One, cursive',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
           }}
         >
           {tabInfo.label}
@@ -175,15 +177,16 @@ const Events = () => {
       </div>
 
       <div 
-        className="w-full pt-20"
+        className="w-full"
         style={{
           background: "linear-gradient(180deg, #100318 0%, #310D3D 15%, #6A3E92 35%, #310D3D 70%, #100318 100%)"
         }}
       >
         {/* Render all sections */}
-        {eventTabs.map((tab) => {
+        {eventTabs.map((tab, index) => {
           const events = eventsPageData[tab.key as keyof typeof eventsPageData] as EventType[] || []
-          return renderEventSection(tab.key, events, tab, tab.ref)
+          const isFirst = index === 0
+          return renderEventSection(tab.key, events, tab, tab.ref, isFirst)
         })}
       </div>
       
