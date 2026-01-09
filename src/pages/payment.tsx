@@ -138,6 +138,36 @@ const PaymentComponent: React.FC = () => {
           </h2>
         </div>
 
+        {/* Disclaimer Section */}
+        <div className="w-full max-w-4xl mb-8 bg-red-900/20 border-2 border-red-500/50 rounded-xl p-6 backdrop-blur-sm">
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0">
+              <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-lg">!</span>
+              </div>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-red-400 font-bold text-xl mb-3">Important Disclaimer</h3>
+              <div className="text-gray-200 space-y-3 text-sm leading-relaxed">
+                <p>
+                  <strong className="text-red-300">Eligibility Requirements:</strong> Registration for Kashiyatra is exclusively for current college students and recent graduates (last year passouts only). Only these participants are eligible for the festival.
+                </p>
+                
+                <p>
+                  <strong className="text-red-300">ID Verification Required:</strong> At the time of collecting your KY ID card during the festival, you must present one of the following documents:
+                </p>
+                <ul className="list-disc list-inside ml-4 space-y-1">
+                  <li> Valid College ID Card, OR</li>
+                  <li> Aadhar Card along with proof of college enrollment</li>
+                </ul>
+                <p className="text-yellow-300 font-semibold">
+                  ⚠️ Failure to provide valid documentation may result in denial of entry and forfeiture of registration fees.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Tickets */}
         <div className="flex flex-col gap-8 md:w-[60%]">
           {/* Ticket 1 */}

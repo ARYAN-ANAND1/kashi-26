@@ -97,16 +97,16 @@ const Events = () => {
             >
               <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 via-gray-800 to-black border-2 border-gray-700 hover:border-gray-400 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
                 {/* Event Image */}
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="aspect-[3/4] overflow-hidden">
                   <img
                     src={event.image}
                     alt={event.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-contain bg-black group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   
                   {/* Gradient Border Effect */}
-                  <div className={`absolute inset-0 bg-gradient-to-r ${tabInfo.color} opacity-0 group-hover:opacity-30 transition-opacity duration-500 mix-blend-overlay`} />
+                  <div className={`absolute inset-0 bg-gradient-to-r ${tabInfo.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500 mix-blend-overlay`} />
                 </div>
 
                 {/* Event Title Overlay */}

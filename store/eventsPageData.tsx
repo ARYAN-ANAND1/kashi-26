@@ -10,20 +10,20 @@ const eventsPageData = {
   concert: [
     {
       id: 1,
-      title: "Krsna",
-      image: "https://kashiyatra.s3.eu-north-1.amazonaws.com/kr%24na.webp",
+      title: "",
+      image: "https://kashiyatra.s3.eu-north-1.amazonaws.com/question_mark.webp",
       type: "concert" as const
     },
     {
       id: 2,
-      title: "Mohit Chauhan",
-      image: "https://kashiyatra.s3.eu-north-1.amazonaws.com/mohit.webp",
+      title: "",
+      image: "https://kashiyatra.s3.eu-north-1.amazonaws.com/mohit.jpeg",
       type: "concert" as const
     },
     {
       id: 3,
-      title: "Bismil",
-      image: "https://kashiyatra.s3.eu-north-1.amazonaws.com/Bismil.webp",
+      title: "",
+      image: "https://kashiyatra.s3.eu-north-1.amazonaws.com/bismil.jpeg",
       type: "concert" as const
     }
   ],
@@ -31,8 +31,8 @@ const eventsPageData = {
   international_carnival: [
     {
       id: 4,
-      title: "Seppe Sitar",
-      image: "https://kashiyatra.s3.eu-north-1.amazonaws.com/sitarist.jpeg",
+      title: "",
+      image: "https://kashiyatra.s3.eu-north-1.amazonaws.com/steppe.jpeg",
       type: "international_carnival" as const
     },
     {
@@ -46,7 +46,7 @@ const eventsPageData = {
   graffiti: [
     {
       id: 7,
-      title: "Doctortoy",
+      title: "",
       image: "https://kashiyatra.s3.eu-north-1.amazonaws.com/doctortoy.jpg",
       type: "graffiti" as const
     },
